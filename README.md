@@ -75,36 +75,6 @@ The Titanic dataset contains information about passengers aboard the RMS Titanic
 - **scikit-learn** - Machine learning preprocessing
 - **jupyter** - Interactive development environment
 
-## 📁 Project Structure
-
-```
-titanic-data-engineering/
-│
-├── data/
-│   ├── raw/                 # Original dataset
-│   ├── processed/           # Cleaned and engineered data
-│   └── external/            # Additional data sources
-│
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_data_cleaning.ipynb
-│   ├── 03_feature_engineering.ipynb
-│   └── 04_final_analysis.ipynb
-│
-├── src/
-│   ├── data_cleaning.py     # Data cleaning functions
-│   ├── feature_engineering.py  # Feature engineering functions
-│   ├── visualization.py     # Visualization utilities
-│   └── utils.py            # Helper functions
-│
-├── reports/
-│   ├── figures/            # Generated plots and charts
-│   └── data_quality_report.html
-│
-├── requirements.txt
-└── README.md
-```
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -152,44 +122,6 @@ jupyter notebook
 
 # 3. Or run the demo script:
 python demo_final_output.py
-```
-
-## 📁 Project Structure
-
-```
-titanic-data-cleaning-project/
-│
-├── 📊 data/
-│   ├── raw/                 # Original dataset
-│   ├── processed/           # Cleaned and engineered data
-│   └── external/            # Additional data sources
-│
-├── 📓 notebooks/
-│   ├── 01_data_exploration.ipynb    # EDA and visualization
-│   ├── 02_data_cleaning.ipynb       # Data cleaning pipeline
-│   ├── 03_feature_engineering.ipynb # Feature creation
-│   └── 04_final_analysis.ipynb      # ML models & insights
-│
-├── 🐍 src/
-│   ├── data_cleaning.py             # Data cleaning functions
-│   ├── feature_engineering.py       # Feature engineering functions
-│   ├── visualization.py             # Visualization utilities
-│   └── utils.py                     # Helper functions
-│
-├── 📈 reports/
-│   ├── figures/                     # Generated plots and charts
-│   └── data_quality_report.html     # Professional HTML report
-│
-├── 🔧 Configuration files
-│   ├── requirements.txt             # Python dependencies
-│   ├── .gitignore                   # Git ignore rules
-│   └── LICENSE                      # MIT License
-│
-└── 📚 Documentation
-    ├── README.md                    # Project documentation
-    ├── CONTRIBUTING.md              # Contribution guidelines
-    └── demo_final_output.py         # Quick demo script
-```
 
 ## 🎯 Key Results
 
@@ -320,9 +252,6 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-### 🌟 Contributors
-
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
 
 ## 📄 License
 
@@ -333,12 +262,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Kaggle for hosting the Titanic dataset competition
 - The pandas and scikit-learn communities for excellent documentation
 - Fellow data science enthusiasts who shared their insights online
-
-## 📞 Contact
-
-- **GitHub:** [@yourusername](https://github.com/yourusername)
-- **LinkedIn:** [Your Profile](https://linkedin.com/in/yourprofile)
-- **Email:** youremail@example.com
 
 ## ⭐ Show Your Support
 
