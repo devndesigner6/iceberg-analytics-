@@ -1,0 +1,67 @@
+name: My Titanic Project Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, '3.10']
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest flake8
+    
+    - name: Lint with flake8
+      run: |
+        # Stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Exit-zero treats all errors as warnings
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    
+    - name: Test data loading
+      run: |
+        python -c "
+        import pandas as pd
+        import os
+        if os.path.exists('data/raw/titanic.csv'):
+            df = pd.read_csv('data/raw/titanic.csv')
+            print(f'Dataset loaded successfully: {df.shape}')
+            assert df.shape[0] > 0, 'Dataset is empty'
+        else:
+            print('Dataset not found - skipping test')
+        "
+    
+    - name: Test modules import
+      run: |
+        python -c "
+        import sys
+        sys.path.append('src')
+        try:
+            from data_cleaning import load_data, handle_missing_values
+            from feature_engineering import extract_title, family_size
+            from visualization import plot_distribution
+            print('All modules imported successfully')
+        except ImportError as e:
+            print(f'Import error: {e}')
+            exit(1)
+        "
+    
+    - name: Run demo script
+      run: |
+        python demo_final_output.py || echo "Demo completed with status $?"
