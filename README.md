@@ -20,7 +20,7 @@
 - **Complete Data Pipeline** from raw data to predictions
 - **Clean, Modular Code** that's easy to understand and extend
 - **Interactive Visualizations** to explore the data
-- **Detailed Analysis** with insights about passenger survival
+- **Detailed Analysis** with insights about passenger survivaL.
 
 ## 📊 Dataset
 
